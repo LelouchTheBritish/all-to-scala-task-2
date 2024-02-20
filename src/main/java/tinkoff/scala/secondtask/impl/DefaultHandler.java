@@ -7,7 +7,11 @@ import tinkoff.scala.secondtask.Handler;
 
 public class DefaultHandler implements Handler {
 
-    private Client client;
+    private final Client client;
+
+    public DefaultHandler(Client client) {
+        this.client = client;
+    }
 
     @Override
     public Duration timeout() {
